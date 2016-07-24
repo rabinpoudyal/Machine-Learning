@@ -8,7 +8,32 @@ In the past decade, machine learning has given us self-driving cars, practical s
 Supervised Learning:
 Supervised learning refers to the fact that we gave the algorithm a data set in which the "right answers" were given.
 To define it with bit more terminology this is also called the regression problem and by regression problem I meant that we are trying to predict the continuous value output.
-For example we are given different prices for different square feet of houses. We can thereafter predict the value of the house that is not in the given value using quadratic or linear regression algorithms.
+For example we are given different prices for different square feet of houses. We can thereafter predict the value of the house that is not in the given value using quadratic or linear regression algorithms. That is produce more "right answers".
+
+Classification:
+Trying to predict the discrete value output from the large data sets. For example trying to predict if the cancer is malignant or benign based upon the size.(0 or One)
+Classification can have more than 2 discrete value output.ex we can have more types of cancers above.
+We can also have more than one attributes for predicting the outputs for example in the above example we can have age,clump thickness,uniformity of cell size, uniformity of cell shape etc.
+So we want to use more features more strictly, use infinite feature variables. So what if our computer is out of memory?
+It turns out that when we talk about an algorithm called the support vector machine , there will be a neat mathematical trick that will allow the computer to deal with infinite number of features.
+
+Unsupervised Learning:
+In supervised learning we are given two types of data sets we are given if the cancer is malignant or benign ie the right answer is given to us already but in unsupervised learning We are not given any information and we are given the datas that looks different- has same levels or given no levels. Given large data sets not told what type of cancer it is and the question is can you find some structutre in the data sets?
+So in unsupervised learning algorithm, the algorithm may cluster two types of datas . For example google uses this to cluster the url pages while using in news feeds => the same news can belong to different medias, which are clustered under recent news feeds.
+ Other examples: Organize computing clusters, Social Network analysis, Market segmentaton, Astronomical data analysis
+
+Cocktail party Problem:
+2people talking to each , has 2 microphones at different distances, one can can be louder to one speaker and lower to other and same for second microphone
+So say they are asked to count to ten in different languages. and the output comes like this:
+And we process this audio under the learning algorithm and it will create a sum and the output becomes difficult to understand. What the cocktail party algorgithm will do is seperate a source and try to find the pattern or cluster.
+So it is complicated.
+
+For carrying out all these audio processing and filtering out this data can be done in one line of code
 
 
+[W,s,v] = svd((repmat(sum(x.*x,1),size(x,1),1).*x)*x');
+
+
+
+in c++,java or python this svd code is very complicated. Using octave for prototyping the machine learning algorithm in octave is easy.
 
