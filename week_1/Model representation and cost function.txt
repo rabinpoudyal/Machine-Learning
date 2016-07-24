@@ -1,0 +1,57 @@
+Model Representation:
+
+
+
+Training set => Learning Algorithm =>h(hypothesis)[f(x) => estimated price]
+
+
+Cost Function:
+How to fit best linear line to our data?
+
+Say we are given A trainining set of datas - size in feet^2(x) and price in $
+Let our hypothesis is: 
+
+h-theta(x) = theta-not + theta-one(x)
+where,
+theta-i's are the parameters of the model
+
+So how to choose theta zero and theta one?
+Lets go throught the following cases:
+
+
+if theta-not = 1.5
+     theta-one = 0 then
+h(x) = 1.5 + 0*x
+which gives a straight line horizontal meeting x-axis at theta not
+
+
+if theta-not = 0
+     theta-one = 0.5 then
+h(x) = 0 + 0.5*x
+which gives a straight line regression diagonal
+
+
+if theta-not = 1
+     theta-one = 0.5 then
+h(x) = 1 + 0.5*x
+which gives a straight line passing above the origin meting x-axis at theta-not
+
+
+So here basically theta-one is a slope and theta-not gives where the line will meet at y-axis(y-intercept) in
+y = mx + c
+
+
+In linear regression we need to come up with the data set that best match the given situation. So how do we determine theta-not and theta-one?
+Idea: choose theta-not, theta-one so that hypothesis function h-theta(x) is close to y for our training examples(x,y)
+
+
+Here we want to minimize the theta-not and theta-one ie cost of house and square feet by using sum of square of errors
+
+J(theta-not,theta-one) = 1/2m * Sigma(h-not(x-i) - y-i)^2 for sigma i=1 to m ie training examples
+
+here h-not-x-i = theta-not + theta-one-x-i
+
+where J(theta-not,theta-one) is the cost function we want to minimize
+
+
+
