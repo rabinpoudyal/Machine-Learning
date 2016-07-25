@@ -1,0 +1,31 @@
+Gradient descent for minimizing arbitary function f(J)
+
+Consider we have some function J( Θ-not, Θ-one)
+and we want to minimize 𝚹-not and 𝚹-one in the function J
+
+Outline for gradient descent:
+Start with some 𝚹-one and 𝚹-two
+Keep changing 𝚹-not and 𝚹-one till we find end up at minimum.
+
+the figure is like a hill. 
+example. imagine one is standing in the top of hill and wants to climb down as quickly as possible so what he does is roughly guesses the direction and goes down repeatedly. and what we want to do in gradient descent algorithm is the look around the datas and find the quickest way of minimizing it as soon as possible.
+
+Gradient descent algorithm defination:
+
+repeat until convergence {
+	𝚹j := 𝚹j - α ∂__J(𝚹-not,𝚹-one) for(j=0 and j=1)
+				 ∂𝚹j
+}
+where := is the assignment
+α is the learning rate. in the previous e.g it is the 	steepness that the person takes to climb down the 	hill. This shows how fast he can climb down
+
+In this equation we are simultaneously update theta-not and theta-one
+
+Simulatneous Update:
+
+temp0 := 𝚹-zero - α ∂__J(𝚹-not,𝚹-one) 
+				 ∂𝚹-zero
+temp1 := 𝚹-one - α ∂__J(𝚹-not,𝚹-one) 
+				 ∂𝚹-one
+𝚹-zero := temp0
+𝚹-one := temp1

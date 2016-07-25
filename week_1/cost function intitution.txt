@@ -1,0 +1,5 @@
+hypothesis h-theta(x) = theta-not + theta-one(x)
+parameters theta-not and theta-one
+cost function: J(theta-not,theta-one) = 1/2m*Sigma(h-theta(x-i) - y-i)^2 where i goes from i=1 to i=m
+goal minimize J(theta-not,theta-one)
+
