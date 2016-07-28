@@ -2,11 +2,34 @@ Model Representation:
 
 
 
-Training set => Learning Algorithm =>h(hypothesis)[f(x) => estimated price]
+Training set of datas
+
+---------------------
+x     |     y       |
+1			2		|
+2			5		|
+3			8		|
+4			9		|
+5			10		|
+6			55		|
+---------------------
+
+gives:
+
+ => Learning Algorithm =>
+
+ h(hypothesis)[f(x) => estimated price]
+
+ A hypothesis is a function that maps x to y i.e takes the x-coordinates and calculates y.ie takes the size and calculate price of house.
 
 
-Cost Function:
+Cost Function(Squared error cost function):
 How to fit best linear line to our data?
+Choose theta-not and theta-one such that the output function h-theta-not is close to the training examples.
+That is I want to make this equation as small as possible:
+					h-theta(x) - y-i
+This is actually the error between the hypothesis and the actual value so we want to minimize as much as we can.
+Also called sum of squares of errors.
 
 Say we are given A trainining set of datas - size in feet^2(x) and price in $
 Let our hypothesis is: 

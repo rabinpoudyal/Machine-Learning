@@ -15,7 +15,7 @@ Gradient descent algorithm defination:
 
 repeat until convergence {
 	𝚹j := 𝚹j - α ∂__J(𝚹-not,𝚹-one) for(j=0 and j=1)
-				 ∂𝚹j
+		      ∂𝚹j
 }
 where := is the assignment
 α is the learning rate. in the previous e.g it is the 	steepness that the person takes to climb down the 	hill. This shows how fast he can climb down
@@ -25,11 +25,12 @@ In this equation we are simultaneously update theta-not and theta-one
 Simulatneous Update:
 
 temp0 := 𝚹-zero - α ∂__J(𝚹-not,𝚹-one) 
-				 ∂𝚹-zero
+		    ∂𝚹-zero
 temp1 := 𝚹-one - α ∂__J(𝚹-not,𝚹-one) 
-				 ∂𝚹-one
+		   ∂𝚹-one
 𝚹-zero := temp0
 𝚹-one := temp1
+<<<<<<< HEAD
 
 Note: In simultaneous update first update temp0 and temp1 with theta-not and theta zero. Then only in next step put temp0 and temp1. Do not update as soon as finding the values.
 
@@ -42,3 +43,5 @@ then,
 Note: simulataneous update same as Gaussian Iteration 
 
 
+=======
+>>>>>>> a18b895e8cfcc9af7a44d13171303254dec3636d

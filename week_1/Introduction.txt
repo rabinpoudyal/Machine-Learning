@@ -7,7 +7,7 @@ In the past decade, machine learning has given us self-driving cars, practical s
 
 Supervised Learning:
 Supervised learning refers to the fact that we gave the algorithm a data set in which the "right answers" were given.
-To define it with bit more terminology this is also called the regression problem and by regression problem I meant that we are trying to predict the continuous value output.
+To define it with bit more terminology this is also called the regression problem and by regression problem we meant that we are trying to predict the continuous value output.
 For example we are given different prices for different square feet of houses. We can thereafter predict the value of the house that is not in the given value using quadratic or linear regression algorithms. That is produce more "right answers".
 
 Classification:
