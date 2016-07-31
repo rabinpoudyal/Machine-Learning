@@ -1,0 +1,2 @@
+Matrices : Rectangular Array Of Numbers
+Dimension of martix: number of rows * number of columns
