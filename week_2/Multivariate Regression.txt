@@ -1,0 +1,42 @@
+In univariate linear regression we have only one variable but in multivariate regression,
+Contains multiple variables
+for example our housing example has more features like no of bedrooms, distance from highway, age(in years) etc.
+
+for example x1,x2,x3...........xn => denotes the variables
+where n is number of features
+
+Previously in our hypothesis:
+
+h-theta(x) = theta-not + theat-one(x)
+
+But in multivariate regression 
+
+h-theta(x) = theta-not + theta-one-x-one + theta-two-x-two + ....... + theta-n-x-n
+
+for convience of notation say x-not = 1
+( x-not for i th feature vector = 1 )
+so,
+	x = [
+		 x0
+		 x1
+		 x2
+		 ....
+		 xn
+		 ]
+		 belongs to n+1 feature vector
+
+	and the parameter vector are
+
+	theta = [
+			 theta-0
+			 theta-1
+			 theta-2
+			   ....
+			 theta-n
+			 ]
+
+So now in our multivariate equation,
+
+	h-not(x) = theta-0-x0 + theta-1-x1 + ..... + theta-n-xn
+			 = theta-transpose-X
+			 = theta-T-x
