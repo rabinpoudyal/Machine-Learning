@@ -1,6 +1,25 @@
-In univariate linear regression we have only one variable but in multivariate regression,
-Contains multiple variables
-for example our housing example has more features like no of bedrooms, distance from highway, age(in years) etc.
+In univariate linear regression we have only one variable or feature but in multivariate regression,
+ we have multiple variables or features.
+ For example in univariate linear regression we have:
+ 	X = house size, used to predict
+ 	y = house price
+
+ 	But,
+
+ In multivariate linear regression we can have
+ 	X1 = size,
+ 	X2 = no of bedrooms,
+ 	X3 = age of house
+ 	X4 = number of floors etc.
+ 	and
+ 	y = Output variable of house price
+
+NOTATION CONVENTIONS USED:
+	n => number of features or variables;
+	m => number of examples(number of rows in table)
+	x<sup>i</sup> => vector of input for example(for i<sup>th</sup> input example)
+	
+
 
 for example x1,x2,x3...........xn => denotes the variables
 where n is number of features

@@ -1,0 +1,5 @@
+We know in our multivatiate equation,
+
+h-theta-(x) = Theta-transpose-x
+			= theta0x0 + theta1x1 + theta2x2 + ... theta-n-xn
+			which is a n+1 dimensional vector
