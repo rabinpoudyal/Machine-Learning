@@ -1,0 +1,25 @@
+
+	we know, h-theta(x) = Sigma(theta-j * x-j ) from j=0 to n
+
+	but theta'x gives same result which is the vectorized implementation
+
+	so
+	the unvectorized implementation is 
+
+	prediction = 0.0;
+	for j = 1:n+1
+		prediction = prediction + theta(j) * x(j)
+	end;
+
+	Vectorized computation:
+
+	prediction = theta' * x
+
+	VECTORIZED IMPLEMENTATION OF GRADIENT DESCEINT OF MULTIPLE VARIBLES
+
+		Ө := Ө - αδ
+
+		where 
+			δ = 1_∑(h-Ө(x-i) - y-i)x-i; i=1:m
+				m
+
