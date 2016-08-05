@@ -1,0 +1,48 @@
+
+	>> A = [1	2;	3	4;	5	6]
+	>> B = [1	2;	3	4;	5	6]
+	>> C = [1	2;	2	2]
+
+	>> A*C
+	>> A .* B % element wise operation 
+	>> A .^ 2 % element wise power
+	>> V = [1	2	3	4]
+	>> 1 ./ V % inverse
+	>> log(V)
+	>> exp(v)
+	>> v
+	>> abs([-1;	2;	-3])
+
+	>> -v % -1*v
+	>> v + ones(length(v),1)
+
+	>> A' % A transpose
+
+	>> a = [1	23	34	33]
+	>> val = max(a)
+	>> max(A)
+
+	>> a < 3 % tells which elements are less than three gives 1 or 0
+
+	>> find(a < 3) % find the elements less than 3
+	
+	>> A = magic(3)
+
+	>> [r,c] = find(A >= 7) % row and column
+
+	>> sum(a) % returns sum of elements of a
+	>> prod(a) % product
+	>> floor(a)
+	>> ceil(a)
+	>> rand(3)
+	>> max(rand(3), rand(3))
+	>> max(A,[],1) % [] per row/col
+	>> max(max(A)) % find the max of all elements
+
+	>> A = magic(9)
+	>> sum(A,1) % find the sum of col
+	>> sum(A,2) % find the sum of row
+	>> A .* eye(9)
+	>> flipup(a)
+	>> flipud(a)
+	>> pinv(A) % find the inverse
