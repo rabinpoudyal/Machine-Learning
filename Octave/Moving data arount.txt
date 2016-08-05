@@ -1,0 +1,72 @@
+Loading data, and manipulating for calculation
+More commands:
+
+	>> A = [1 2; 3 4; 5 6]
+	>> size(A) % gives the row vs col
+	>> ans = 
+		3	2
+
+	>> sz = size(A)
+	sz = 
+		3	2
+	>> size(sz)
+	ans =
+		1	2
+
+	>>size(A,1)
+	ans = 3 
+
+	>>size(A,2)
+	ans = 2
+
+	>> V = [1	2	3	4]
+	>> length(A)
+	ans = 5
+
+LOADING DATA:
+	>> pwd % show the current dir
+
+	>> cd 'path to load'
+	>> ls
+
+	say you have two files in the directory -> featureX.dat and priceY.dat with data
+
+	>>load featureX.dat
+	>>load priceY.dat
+	>>load('priceY.dat')
+
+	>> who % shows the variable in memory or in octave workspace
+
+	>> featureX % gives all vectors from data file
+
+	>> whos % list variable with the size too more feature than who command
+
+	>> clear featureX % clear the variables form octave workspace
+
+SAVING DATA:
+	>> priceY(1:10)
+	>> whos
+
+	>> save hello.mat v; % save as matlab file where v is to save in compressed binary format use --ascii to save as text or ascii
+	
+	>> A = [1	2;	3	4;	5	6]
+	>> A(3,2)
+	ans = 6
+
+	>> A(2,:) % ":" means every element along that row or column
+
+	>>A([1,3],:)
+	ans = 
+
+	>> A(:,2) = [10; 11; 12] % assignment
+
+	>> A = [A,[100	101	102]] % append another column to the right
+
+	>> A(:) % put all elements of A into a single vector
+
+	>> A = [1	2;	3	4;	5	6]
+	>> B = [3	3;	3	2;	3	1]
+
+	>> C = [A   B]
+
+	>> C = [A;	B] % semicolon tells ocatve to go to the next line
