@@ -57,7 +57,7 @@ Matrices with octave:
 
 	Other matrix commands:
 
-	>> ones(2,3)
+	>> ones(2,3) % create a 1 matrix of size 2x3
 	ans = 
 		1	1	1
 		1	1	1

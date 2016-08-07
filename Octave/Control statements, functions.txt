@@ -67,7 +67,7 @@ FUNCTONS:
 		% X is the "desgin matrix" containing training examples
 		% Y is the class labels
 
-		m = size(X,1);
+		m = size(X,1); % 1 means the row and 2 means colums so here it returns the no of rows i.e training set.
 		predictions = X*theta;
 		sqrErrors = (predictions-y).^2;
 

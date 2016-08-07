@@ -1,11 +1,11 @@
 
-	>> t=[1:0.1:0.98]
-	>> y1 = sin(2*pi*4*t)
+	>> t = [0:0.01:0.98] % Generate a vector starting from 0 to 0.98 each time incrementing by 0.01
+	>> y1 = sin(2*pi*4*t) % Calculate the functional value for each elements or t
 	>> plot(t,y1)
 	>> y2 = cos(2*pi*4*t)
 	>> plot(t,y2)
 	>> hold on; % to plot on top of another figure
-	>> plot(t,yw,'r')
+	>> plot(t,y2,'r')
 	>> xlabel('time')
 	>> ylabel('value')
 	>> legend('sin','cos')

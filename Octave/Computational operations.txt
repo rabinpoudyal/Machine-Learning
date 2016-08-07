@@ -30,19 +30,21 @@
 
 	>> [r,c] = find(A >= 7) % row and column
 
-	>> sum(a) % returns sum of elements of a
-	>> prod(a) % product
+	>> sum(a) % returns sum of elements of vector a
+	>> prod(a) % product of the elements of vector a
 	>> floor(a)
 	>> ceil(a)
 	>> rand(3)
 	>> max(rand(3), rand(3))
-	>> max(A,[],1) % [] per row/col
+	>> max(A,[],1) % returns max value from all columns
+	>> max(A,[],2) % returns the maximum values from all rows
 	>> max(max(A)) % find the max of all elements
+	>> min(A) % returns all the smallest values from the column
 
 	>> A = magic(9)
 	>> sum(A,1) % find the sum of col
 	>> sum(A,2) % find the sum of row
 	>> A .* eye(9)
-	>> flipup(a)
-	>> flipud(a)
-	>> pinv(A) % find the inverse
+	>> flipud(a) % flip the matrix/array upside down i.e rotate the array about horizontal axis
+	>> flip(a) % reverse the sequence of vector elements or same as flipup
+	>> pinv(A) % find the inverse % find the inverse of matrix
