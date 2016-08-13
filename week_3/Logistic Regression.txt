@@ -1,0 +1,90 @@
+Switching from regression problem to the classification problems.
+
+BINARY CLASSIFICATION:
+
+	Instead of output vector y being a continuous range of values, it will only be 0 or 1.
+
+				y belongs to {0,1}
+
+				where,
+				0 => "negative class"
+				1 => "positive class"
+		but we are free to assign whatever we want to
+
+	The two class are called "Binary Classification Problem".
+	One method to solve this problem is to use linear regression and map all predictions greater than 0.5 as 1 and all less than 0.5 as 0. 
+	But this method doesn't work well because classification is not actually a linear function at all.
+
+HYPOTHESIS REPRESENTATION:
+	
+	Our hypothesis should satisfy:
+
+			0 <= hθ(x) <= 1
+
+	The new form uses the "Sigmoid Function" also called the "Logistic Function":
+
+			hθ(x) = g(θTx)	
+			z = θTx	(T = Transpose)
+			g(z) = __1__
+				   1+e^−z
+
+	The diagramatic representation of this function is the snake shapped curve that intersects y-axis at 0.5 between 0 and 1.
+
+	The function g(z) here maps any real number to the (0,1) interval, that makes it useful for transforming an arbitary valued function into a function better suited for classification.
+
+	We start with the old hypothesis(linear regression), except that we want to restrict the range to 0 and 1.This can be accomplished by plugging θTx into the logistic function.
+
+	hθ will give us the probability that our output is 1. For example, hθ(x)=0.7 gives us the probability of 70% that our output is 1.
+				hθ(x) = P(y=1|x ;θ) = 1 − P(y=0|x ;θ)
+				P(y=0|x;θ) + P(y=1|x;θ) = 1
+
+	Our probability that our prediction is 0 is just the complement of our probability that it is 1 (e.g. if probability that it is 1 is 70%, then the probability that it is 0 is 30%).
+
+DECISION BOUNDARY:
+
+	In order to get our descrete 0 or 1 classification, we can translate the output of the hypothesis function as follows:
+			hθ(x)≥0.5→y=1
+			hθ(x)<0.5→y=0
+
+	The way our logistic function g behaves is when its input is greater than or equal to zero, its output is greater than or equal to 0.5:
+
+			g(z) >= 0.5
+			when z >= 0
+
+		Note:
+			z = 0, e^0 = 1 => g(z) = 1/2
+			z → ∞, e^-∞ → 0 => g(z) = 1
+			z → -∞, e^∞ → ∞ => g(z) = 0
+
+	So if our input to g is θTX, then that means:
+			hθ(x) = g(θTx) ≥ 0.5
+			when θTx ≥ 0
+
+	From these statements now we can say:
+
+			θTx≥0⇒y=1
+			θTx<0⇒y=0
+	The decision boundary is the line that seperates the area where y = 0 and where y = 1. It is created by our hypothesis function.
+	Example:
+		θ=[ 5
+		   -1
+			0]
+		y = 1
+
+		when,
+			5+(−1)x1+0x2≥0⇔
+					5−x1 ≥0⇔
+					 −x1 ≥-5⇔
+					  x1 <= 5
+			In this case our decision boundary is straight vertical line placed on the graph where x1 = 5 and everything to the left denotes y = 1, while everything to the right denotes y = 0.
+
+			Again the input to the sigmoid function g(z) (e.g θTX) doesn't need to be linear, and could be a function that describes a circle (e.g. z = θ0+θ1*x1^2+θ2*x2^2) or any shape to fit our data.)
+
+COST FUNCTION:
+
+	We cannot use the same cost function that we use for the linear regression because the logistic functionwill cause the output to be wavy, causing many local optima. In other words , it will cause not be a convex function for logistic function regression looks like:
+
+			J(θ) = _1_∑i=1 to m {Cost(hθ(x(i)),y(i))}
+					m
+			Cost(hθ(x),y) = −log(hθ(x)) if y = 1
+			Cost(hθ(x),y)=−log(1−hθ(x)) if y = 0
