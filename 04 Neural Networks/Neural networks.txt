@@ -1,0 +1,100 @@
+Why do we need neural networks?
+
+Say we have a complex supervised learning classification problem.
+We can use logistic regression with many polynomial terms for solving this hypothesis.
+But what if the number of feature is very high say n=100. Then?
+It is not wise to use polynomial term to fit the hypothesis because,
+		
+		If we are to include all the quadratic terms for fitting our model then the size of polynomial is going to be roughly
+		big-Oh of n-squared / 2
+
+		So, for n=100
+		no. of polynomial terms = 100^2/2 = approx(50000) polynomial terms.
+		like x1^2, x1*x2, x1*x3 ............... x1*x100
+		x2*x1, x2^2, .......................... x2*x100
+		...............................................
+		x100*x1 .................................x100^2
+
+		And only crazy people will do this
+
+		So what if we decide to fit the quadratic function in the model?
+		Another trouble because this would give approx big-Oh of n^3/3 polynomials.
+		e.g. (x12x2, x1x2x3, x1x4x23 etc)
+		There are even more features grows O(n^s3)
+		About 170 000 features for n = 100
+		So the main idea is we can't use logistic regression to fit the hypothesis better.
+
+		A way around where another solution is to use only the subset of the polynomial.
+		However, if you don't have enough features, often a model won't let you fit a complex dataset.
+
+The logistic regression works well when you have 1-2 features(that is when you can simply list all the polynomial terms for example for two features you can list 4 polynomial terms).
+But if you have 100 features it is not practical.
+
+EXAMPLE WHERE N IS LARGE => COMPUTER VISION
+
+	The way human sees the image but computers see the matrix of pixels intensity values.
+	It looks at the matrix and explains what these numbers represent.
+
+	Say we want to build a car detector:
+		Then we need to build a training set of
+			Not cars and
+			Cars
+		Then test against cars
+
+		How can we do this?
+			Plot two pixels (ie pixels locations?)
+			Plot car vs non-car on the graph
+
+		We need a non linear hypothesis to seperate the class.
+	
+	Consider a image of 50px by 50px = 2500px so n=2500
+	If RGB then 7500px
+	If 100*100 RBG then --> 50000000 features 
+
+	And this is too big 
+		So simple logistic regression is not going to work for problems like this complex systems
+		Neural Networks are far more better for complex hypothesis even when the feature space is huge.
+
+
+
+NEURAL NETWORKS:
+
+	Originally motivated by looking at machines whuch replicate the brain's functionality.
+
+	Origins:
+		To build learning techniques
+		NNs are computationally expensive so only now neural networks become more computationally feasible.
+
+
+MODEL REPRESENTATION 1
+
+	How can we represent NNs?
+		Simulate the network of biological neurons
+
+	Artificial neural network - representation of neuron
+
+	In artificial neural network, a neurone is a logistic unit 
+		Feed input via input wires
+		Logistic unit does computaion
+		Sends optput down output wires
+
+		say
+			x = [x0
+				 x1
+				 x2
+				 x3]
+
+			θ = [θ0
+				 θ1
+				 θ2
+				 θ3]
+
+			hθ(x) = 1 / (1 + e^θ'x)
+
+		This is very simple model of neuron's computation. It is often good to include x0 as input - biased unit
+			This is equal to 1
+
+		This is an artificial neurone with sigmoid(logistic) activation function
+		θ vector is also called as weights of a model
+
+	In the multi-level neural network

@@ -1,0 +1,4 @@
+The Problem Of Overfitting:
+
+Regularization is designed to solve the problem of overfitting.
+High bias or underfitting is when the form of our hypothesis function h maps poorly to the trend of the data.It is usally caused by the function that is too simple or uses too few trends of data.
