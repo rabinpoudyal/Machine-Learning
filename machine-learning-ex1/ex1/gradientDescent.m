@@ -22,9 +22,6 @@ delta = 1 / m * (A' * X)';  % ' ((n+1) x 1 vector)
 theta = theta - (alpha * delta);  % ' ((n+1) x 1 vector)
 
 
-J_history(iter) = computeCost(X, y, theta);
-
-
     % ============================================================
 
     % Save the cost J in every iteration    
